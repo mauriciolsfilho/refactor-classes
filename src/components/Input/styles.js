@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -21,17 +21,10 @@ export const Container = styled.div`
     line-height: 36px;
   }
 
-  ${props =>
+  ${(props) =>
     props.isFocused &&
     css`
-      color: #ff9000;
-      border-color: #ff9000;
-    `}
-
-  ${props =>
-    props.isFilled &&
-    css`
-      color: #ff9000;
+      border: 1px solid #ff9000;
     `}
 
   input {
@@ -43,6 +36,12 @@ export const Container = styled.div`
     &::placeholder {
       color: #b7b7cc;
     }
+
+    ${(props) =>
+      props.isFocused &&
+      css`
+        color: #ff9000;
+      `}
   }
 
   svg {

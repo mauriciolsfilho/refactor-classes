@@ -13,7 +13,7 @@ const Input = ({ name, icon: Icon, ...rest }) => {
   const inputRef = useRef(null);
 
   const [isFocused, setIsFocused] = useState(false);
-  const [isFilled, setIsFilled] = useState(false);
+  const [ isFilled, setIsFilled] = useState(false);
 
   const { fieldName, defaultValue, registerField } = useField(name);
 
